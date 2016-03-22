@@ -8,12 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		A32585611C853C510097B673 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32585601C853C510097B673 /* AppDelegate.swift */; };
-		A32585631C853C510097B673 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32585621C853C510097B673 /* ViewController.swift */; };
+		A32585631C853C510097B673 /* DemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32585621C853C510097B673 /* DemoController.swift */; };
 		A32585661C853C510097B673 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32585641C853C510097B673 /* Main.storyboard */; };
 		A32585681C853C510097B673 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32585671C853C510097B673 /* Assets.xcassets */; };
 		A325856B1C853C510097B673 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32585691C853C510097B673 /* LaunchScreen.storyboard */; };
 		A32585761C853C510097B673 /* XHDBManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32585751C853C510097B673 /* XHDBManagerTests.swift */; };
 		A32585811C853C520097B673 /* XHDBManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32585801C853C520097B673 /* XHDBManagerUITests.swift */; };
+		A32585941C853C9D0097B673 /* XHDBAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32585901C853C9D0097B673 /* XHDBAdapter.swift */; };
+		A32585951C853C9D0097B673 /* XHDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32585911C853C9D0097B673 /* XHDBManager.swift */; };
+		A32585961C853C9D0097B673 /* XHDBSerializing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32585921C853C9D0097B673 /* XHDBSerializing.swift */; };
+		A32585A71C853D020097B673 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A325859D1C853D020097B673 /* FMDatabase.m */; };
+		A32585A81C853D020097B673 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A325859F1C853D020097B673 /* FMDatabaseAdditions.m */; };
+		A32585A91C853D020097B673 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A32585A11C853D020097B673 /* FMDatabasePool.m */; };
+		A32585AA1C853D020097B673 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A32585A31C853D020097B673 /* FMDatabaseQueue.m */; };
+		A32585AB1C853D020097B673 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A32585A61C853D020097B673 /* FMResultSet.m */; };
+		A32585AD1C853D650097B673 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A32585AC1C853D650097B673 /* libsqlite3.0.tbd */; };
+		A32585AF1C853EC50097B673 /* create_user.sql in Resources */ = {isa = PBXBuildFile; fileRef = A32585AE1C853EC50097B673 /* create_user.sql */; };
+		A32585B11C854BBD0097B673 /* README in Resources */ = {isa = PBXBuildFile; fileRef = A32585B01C854BBD0097B673 /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,18 +46,36 @@
 
 /* Begin PBXFileReference section */
 		A325855D1C853C510097B673 /* XHDBManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XHDBManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A32585601C853C510097B673 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A32585621C853C510097B673 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A32585601C853C510097B673 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../XHDBManager/AppDelegate.swift; sourceTree = "<group>"; };
+		A32585621C853C510097B673 /* DemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoController.swift; sourceTree = "<group>"; };
 		A32585651C853C510097B673 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A32585671C853C510097B673 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A32585671C853C510097B673 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../XHDBManager/Assets.xcassets; sourceTree = "<group>"; };
 		A325856A1C853C510097B673 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A325856C1C853C510097B673 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A325856C1C853C510097B673 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../XHDBManager/Info.plist; sourceTree = "<group>"; };
 		A32585711C853C510097B673 /* XHDBManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XHDBManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A32585751C853C510097B673 /* XHDBManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XHDBManagerTests.swift; sourceTree = "<group>"; };
 		A32585771C853C510097B673 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A325857C1C853C520097B673 /* XHDBManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XHDBManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A32585801C853C520097B673 /* XHDBManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XHDBManagerUITests.swift; sourceTree = "<group>"; };
 		A32585821C853C520097B673 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A32585901C853C9D0097B673 /* XHDBAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHDBAdapter.swift; sourceTree = "<group>"; };
+		A32585911C853C9D0097B673 /* XHDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHDBManager.swift; sourceTree = "<group>"; };
+		A32585921C853C9D0097B673 /* XHDBSerializing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHDBSerializing.swift; sourceTree = "<group>"; };
+		A32585971C853CBA0097B673 /* XHDBManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "XHDBManager-Bridging-Header.h"; path = "../XHDBManager-Bridging-Header.h"; sourceTree = "<group>"; };
+		A325859C1C853D020097B673 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		A325859D1C853D020097B673 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		A325859E1C853D020097B673 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		A325859F1C853D020097B673 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		A32585A01C853D020097B673 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		A32585A11C853D020097B673 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		A32585A21C853D020097B673 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		A32585A31C853D020097B673 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		A32585A41C853D020097B673 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		A32585A51C853D020097B673 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		A32585A61C853D020097B673 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		A32585AC1C853D650097B673 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		A32585AE1C853EC50097B673 /* create_user.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = create_user.sql; sourceTree = "<group>"; };
+		A32585B01C854BBD0097B673 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A32585AD1C853D650097B673 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,12 +127,11 @@
 		A325855F1C853C510097B673 /* XHDBManager */ = {
 			isa = PBXGroup;
 			children = (
-				A32585601C853C510097B673 /* AppDelegate.swift */,
-				A32585621C853C510097B673 /* ViewController.swift */,
-				A32585641C853C510097B673 /* Main.storyboard */,
-				A32585671C853C510097B673 /* Assets.xcassets */,
-				A32585691C853C510097B673 /* LaunchScreen.storyboard */,
-				A325856C1C853C510097B673 /* Info.plist */,
+				A32585B01C854BBD0097B673 /* README */,
+				A325859B1C853D020097B673 /* FMDB */,
+				A325858E1C853C9D0097B673 /* XHDBManager */,
+				A32585621C853C510097B673 /* DemoController.swift */,
+				A32585AE1C853EC50097B673 /* create_user.sql */,
 			);
 			path = XHDBManager;
 			sourceTree = "<group>";
@@ -110,6 +139,13 @@
 		A32585741C853C510097B673 /* XHDBManagerTests */ = {
 			isa = PBXGroup;
 			children = (
+				A32585AC1C853D650097B673 /* libsqlite3.0.tbd */,
+				A32585971C853CBA0097B673 /* XHDBManager-Bridging-Header.h */,
+				A32585601C853C510097B673 /* AppDelegate.swift */,
+				A32585641C853C510097B673 /* Main.storyboard */,
+				A32585671C853C510097B673 /* Assets.xcassets */,
+				A32585691C853C510097B673 /* LaunchScreen.storyboard */,
+				A325856C1C853C510097B673 /* Info.plist */,
 				A32585751C853C510097B673 /* XHDBManagerTests.swift */,
 				A32585771C853C510097B673 /* Info.plist */,
 			);
@@ -123,6 +159,34 @@
 				A32585821C853C520097B673 /* Info.plist */,
 			);
 			path = XHDBManagerUITests;
+			sourceTree = "<group>";
+		};
+		A325858E1C853C9D0097B673 /* XHDBManager */ = {
+			isa = PBXGroup;
+			children = (
+				A32585901C853C9D0097B673 /* XHDBAdapter.swift */,
+				A32585911C853C9D0097B673 /* XHDBManager.swift */,
+				A32585921C853C9D0097B673 /* XHDBSerializing.swift */,
+			);
+			path = XHDBManager;
+			sourceTree = "<group>";
+		};
+		A325859B1C853D020097B673 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				A325859C1C853D020097B673 /* FMDatabase.h */,
+				A325859D1C853D020097B673 /* FMDatabase.m */,
+				A325859E1C853D020097B673 /* FMDatabaseAdditions.h */,
+				A325859F1C853D020097B673 /* FMDatabaseAdditions.m */,
+				A32585A01C853D020097B673 /* FMDatabasePool.h */,
+				A32585A11C853D020097B673 /* FMDatabasePool.m */,
+				A32585A21C853D020097B673 /* FMDatabaseQueue.h */,
+				A32585A31C853D020097B673 /* FMDatabaseQueue.m */,
+				A32585A41C853D020097B673 /* FMDB.h */,
+				A32585A51C853D020097B673 /* FMResultSet.h */,
+				A32585A61C853D020097B673 /* FMResultSet.m */,
+			);
+			path = FMDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +293,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A32585B11C854BBD0097B673 /* README in Resources */,
+				A32585AF1C853EC50097B673 /* create_user.sql in Resources */,
 				A325856B1C853C510097B673 /* LaunchScreen.storyboard in Resources */,
 				A32585681C853C510097B673 /* Assets.xcassets in Resources */,
 				A32585661C853C510097B673 /* Main.storyboard in Resources */,
@@ -256,8 +322,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A32585631C853C510097B673 /* ViewController.swift in Sources */,
+				A32585631C853C510097B673 /* DemoController.swift in Sources */,
+				A32585961C853C9D0097B673 /* XHDBSerializing.swift in Sources */,
+				A32585951C853C9D0097B673 /* XHDBManager.swift in Sources */,
+				A32585A71C853D020097B673 /* FMDatabase.m in Sources */,
+				A32585AB1C853D020097B673 /* FMResultSet.m in Sources */,
 				A32585611C853C510097B673 /* AppDelegate.swift in Sources */,
+				A32585A91C853D020097B673 /* FMDatabasePool.m in Sources */,
+				A32585A81C853D020097B673 /* FMDatabaseAdditions.m in Sources */,
+				A32585941C853C9D0097B673 /* XHDBAdapter.swift in Sources */,
+				A32585AA1C853D020097B673 /* FMDatabaseQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +373,7 @@
 				A32585651C853C510097B673 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../XHDBManager;
 			sourceTree = "<group>";
 		};
 		A32585691C853C510097B673 /* LaunchScreen.storyboard */ = {
@@ -307,6 +382,7 @@
 				A325856A1C853C510097B673 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ../XHDBManager;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -399,10 +475,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = XHDBManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.litsunny.XHDBManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XHDBManager-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -410,10 +489,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = XHDBManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.litsunny.XHDBManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XHDBManager-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -484,6 +565,7 @@
 				A32585871C853C520097B673 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A32585881C853C520097B673 /* Build configuration list for PBXNativeTarget "XHDBManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +574,7 @@
 				A325858A1C853C520097B673 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A325858B1C853C520097B673 /* Build configuration list for PBXNativeTarget "XHDBManagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +583,7 @@
 				A325858D1C853C520097B673 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
